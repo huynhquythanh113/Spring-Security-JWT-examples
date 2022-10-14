@@ -12,8 +12,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.ManyToAny;
 
 import com.example.demo.role.Role;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -63,11 +62,7 @@ public class User {
 		this.age = age;
 	}
 	public User() {}
-	@Override
-	public String toString() {
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		return gson.toJson(this);
-	}
+
 	
 				
 }
