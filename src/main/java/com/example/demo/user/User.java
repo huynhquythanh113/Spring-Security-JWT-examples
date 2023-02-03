@@ -26,6 +26,7 @@ import net.bytebuddy.asm.Advice.This;
 @NoArgsConstructor
 public class User {
 	public Collection<Role> getRoles() {
+		
 		return roles;
 	}
 	public void setRoles(Collection<Role> roles) {
@@ -35,6 +36,13 @@ public class User {
 	private Long id ;
 	private String name;
 	private int age;
+	private String passWord;
+	public String getPassWord() {
+		return passWord;
+	}
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
 	@ManyToAny(fetch = FetchType.EAGER, metaColumn = @Column)
 	private Collection<Role> roles  = new ArrayList<>();
 	public Long getId() {
@@ -61,7 +69,6 @@ public class User {
 		this.name = name;
 		this.age = age;
 	}
-
+	public User() {}
 	
-				
 }

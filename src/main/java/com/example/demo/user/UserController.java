@@ -23,7 +23,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
-@RequestMapping(path = "/user")
+@RequestMapping(path = "/api/user")
 @RestController
 public class UserController {
 	
@@ -51,7 +51,7 @@ public class UserController {
 		return userService.getUserByName(name);
 	}
 	@PutMapping
-	public String Update(@RequestBody User newuser) {	
+	public User Update(@RequestBody User newuser) {	
 		return userService.updateUser(newuser);
 	}
 	@PostMapping("/role")
